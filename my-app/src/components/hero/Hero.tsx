@@ -1,54 +1,38 @@
+'use client'
+
 import Image from 'next/image'
-import { CiPlay1 } from 'react-icons/ci'
+import { motion } from 'framer-motion'
+import { HeroContent } from './HeroContent'
+import { HeroIllustration } from './HeroIllustration'
 
 export function Hero() {
 	return (
-		<section className='relative w-full overflow-x-clip'>
-			<div className='w-5/6 mx-auto relative'>
-				<div className='grid grid-cols-2 items-center'>
-					<div className='flex flex-col relative gap-6'>
-						<span className='text-coral font-bold text-xl uppercase tracking-wider'>
-							Best Destinations around the world
-						</span>
-						<h1 className='font-display text-7xl font-bold text-navy leading-tight'>
-							Travel, enjoy
-							<br /> and live a new
-							<br /> and full life
-						</h1>
-						<p className='text-gray-text text-base leading-relaxed max-w-md'>
-							Built Wicket longer admire do barton vanity itself do in it.
-							Preferred to sportsmen it engrossed listening. Park gate sell they
-							west hard for the.
-						</p>
-						<div className='flex mt-2 gap-4'>
-							<button className='btn-primary bg-amber rounded-2xl text-background py-3 cursor-pointer hover:bg-coral animate px-3'>
-								Find out more
-							</button>
-							<div className='flex items-center gap-3'>
-								<div className='bg-coral rounded-full hover:bg-coral-light animate w-11 h-11 flex items-center justify-center'>
-									<CiPlay1 className='text-white w-7 h-7' />
-								</div>
-								<span className='font-medium text-navy'>Play Demo</span>
-							</div>
-						</div>
-					</div>
+		<section
+			id='home'
+			className='relative w-full overflow-x-clip pt-8 md:pt-16 pb-12 md:pb-20'
+		>
+			<motion.div
+				initial={{ opacity: 0, scale: 0.95, y: -20 }}
+				animate={{ opacity: 1, scale: 1, y: 0 }}
+				transition={{ duration: 1.2, ease: 'easeOut' }}
+				className='absolute -top-45 -right-10 md:-top-45 md:-right-20 pointer-events-none z-0 w-[65%] md:w-[53%] max-w-250 h-auto'
+			>
+				<Image
+					src='/imgs/Decore.png'
+					alt=''
+					width={1000}
+					height={1000}
+					className='w-full h-auto object-top-right'
+					priority
+					quality={90}
+					style={{ width: '100%', height: 'auto' }}
+				/>
+			</motion.div>
 
-					<div className='relative flex items-center justify-center min-h-[700px]'>
-						<Image
-							src='/imgs/Decore.png'
-							alt=''
-							width={800}
-							height={900}
-							className='absolute object-contain -top-64  -right-70 pointer-events-none '
-						/>
-						<Image
-							src='/imgs/Traveller.png'
-							alt='Traveler with luggage'
-							width={691}
-							height={787}
-							className='relative z-10 object-contain pointer-events-none'
-						/>
-					</div>
+			<div className='w-5/6 mx-auto relative z-10'>
+				<div className='grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-4'>
+					<HeroContent />
+					<HeroIllustration />
 				</div>
 			</div>
 		</section>
