@@ -40,6 +40,7 @@ const itemVariants: Variants = {
 
 export function MobileNav({ isOpen, setIsOpen, onScrollTo }: MobileNavProps) {
 	const { handleMobileClick, handleClose, handleToggle } = useMobileNav({
+		isOpen, 
 		setIsOpen,
 		onScrollTo,
 	})
