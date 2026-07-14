@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { useHeader } from './useHeader'
 import { Logo } from './Logo'
 import { DesktopNav } from './DesktopNav'
@@ -7,6 +8,18 @@ import { MobileNav } from './MobileNav'
 
 export function Header() {
 	const { isOpen, setIsOpen, isScrolled, handleScrollTo } = useHeader()
+
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = ''
+		}
+
+		return () => {
+			document.body.style.overflow = ''
+		}
+	}, [isOpen])
 
 	return (
 		<header

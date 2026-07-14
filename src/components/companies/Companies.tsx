@@ -25,7 +25,7 @@ const logoVariants: Variants = {
 
 export function Companies() {
 	return (
-		<section className='w-5/6 mx-auto py-12 md:py-16 overflow-visible'>
+		<section className='w-5/6 mx-auto py-16 md:py-16 overflow-visible'>
 			<motion.div
 				variants={containerVariants}
 				initial='hidden'

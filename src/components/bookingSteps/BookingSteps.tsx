@@ -10,36 +10,36 @@ const containerVariants: Variants = {
 	visible: {
 		opacity: 1,
 		transition: {
-			staggerChildren: 0.2,
+			staggerChildren: 0.12, 
 		},
 	},
 }
 
 const textLeftVariants: Variants = {
-	hidden: { opacity: 0, x: -50 },
+	hidden: { opacity: 0, x: -30 }, 
 	visible: {
 		opacity: 1,
 		x: 0,
-		transition: { type: 'spring', stiffness: 60, damping: 15 },
+		transition: { type: 'spring', stiffness: 90, damping: 18 },
 	},
 }
 
 const stepItemVariants: Variants = {
-	hidden: { opacity: 0, x: -30 },
+	hidden: { opacity: 0, x: -20 }, 
 	visible: {
 		opacity: 1,
 		x: 0,
-		transition: { type: 'spring', stiffness: 80, damping: 14 },
+		transition: { type: 'spring', stiffness: 100, damping: 16 },
 	},
 }
 
 const cardAnimationVariants: Variants = {
-	hidden: { opacity: 0, scale: 0.9, y: 50 },
+	hidden: { opacity: 0, scale: 0.95, y: 30 }, 
 	visible: {
 		opacity: 1,
 		scale: 1,
 		y: 0,
-		transition: { type: 'spring', stiffness: 50, damping: 15, delay: 0.3 },
+		transition: { type: 'spring', stiffness: 80, damping: 18, delay: 0.25 },
 	},
 }
 
@@ -53,7 +53,7 @@ export function BookingSteps() {
 				variants={containerVariants}
 				initial='hidden'
 				whileInView='visible'
-				viewport={{ once: true, margin: '-100px' }}
+				viewport={{ once: true, margin: '-80px' }}
 				className='flex flex-col gap-6 md:gap-8 text-left z-10'
 			>
 				<motion.div variants={textLeftVariants} className='flex flex-col gap-3'>

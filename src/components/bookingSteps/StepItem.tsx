@@ -14,17 +14,18 @@ export function StepItem({ icon, title, desc, variants }: StepItemProps) {
 	return (
 		<motion.div
 			variants={variants}
+			style={{ translateZ: 0 }}
 			className='flex items-start gap-4 group cursor-pointer'
 		>
-			<div className='shrink-0 transition-transform duration-300 group-hover:scale-110 w-12 h-12 relative'>
-		
+	
+			<div className='shrink-0 transition-transform duration-200 group-hover:scale-105 w-12 h-12 relative will-change-transform'>
 				<Image
 					src={icon}
 					alt={title}
 					fill
 					sizes='48px'
 					className='object-contain'
-					quality={90}
+					quality={80} 
 				/>
 			</div>
 			<div className='flex flex-col gap-1'>
