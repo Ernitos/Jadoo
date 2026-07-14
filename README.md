@@ -24,5 +24,5 @@ To run this project locally, follow these simple steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Ernitos/Jadoo.git](https://github.com/Ernitos/Jadoo.git)
+   git clone [https://github.com/Ernitos/Jadoo.git]
    cd Jadoo
