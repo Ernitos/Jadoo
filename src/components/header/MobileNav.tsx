@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react'
 import { motion, AnimatePresence, Variants } from 'framer-motion'
 import { NAV_LINKS } from './NavData'
 import { useMobileNav } from './useMobileNav'
@@ -40,7 +41,7 @@ const itemVariants: Variants = {
 
 export function MobileNav({ isOpen, setIsOpen, onScrollTo }: MobileNavProps) {
 	const { handleMobileClick, handleClose, handleToggle } = useMobileNav({
-		isOpen, 
+		isOpen,
 		setIsOpen,
 		onScrollTo,
 	})
@@ -66,7 +67,7 @@ export function MobileNav({ isOpen, setIsOpen, onScrollTo }: MobileNavProps) {
 						initial='closed'
 						animate='opened'
 						exit='closed'
-						className='fixed top-0 left-0 w-screen h-dvh bg-white flex flex-col items-center justify-center gap-10 md:hidden'
+						className='fixed top-0 left-0 w-screen h-dvh bg-white flex flex-col items-center justify-center gap-10 md:hidden z-50 touch-none'
 					>
 						<button
 							onClick={handleClose}
@@ -93,13 +94,13 @@ export function MobileNav({ isOpen, setIsOpen, onScrollTo }: MobileNavProps) {
 							variants={itemVariants}
 							className='flex flex-col items-center gap-4 w-2/3'
 						>
-							<button className='w-full border border-gray-300 rounded-full py-3 text-navy font-semibold text-lg hover:bg-navy/5 active:scale-95 transition-all duration-200'>
+							<button className='w-full border border-gray-300 rounded-full py-3 text-navy font-semibold text-lg hover:bg-navy/5 active:scale-95 transition-all duration-200 cursor-pointer'>
 								Login
 							</button>
-							<button className='w-full bg-navy text-white rounded-full py-3 font-semibold text-lg hover:bg-navy/90 active:scale-95 transition-all duration-200 shadow-md'>
+							<button className='w-full bg-navy text-white rounded-full py-3 font-semibold text-lg hover:bg-navy/90 active:scale-95 transition-all duration-200 shadow-md cursor-pointer'>
 								Sign up
 							</button>
-							<button className='w-full border border-gray-200 rounded-full py-3 text-navy font-semibold text-lg hover:bg-navy/5 active:scale-95 transition-all duration-200'>
+							<button className='w-full border border-gray-200 rounded-full py-3 text-navy font-semibold text-lg hover:bg-navy/5 active:scale-95 transition-all duration-200 cursor-pointer'>
 								English
 							</button>
 						</motion.div>
@@ -109,3 +110,5 @@ export function MobileNav({ isOpen, setIsOpen, onScrollTo }: MobileNavProps) {
 		</>
 	)
 }
+
+export default MobileNav

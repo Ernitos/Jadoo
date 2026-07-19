@@ -18,7 +18,7 @@ export function HeroIllustration() {
 				className='relative z-10 w-full flex justify-center'
 			>
 				<Image
-					src='/imgs/Traveller.svg'
+					src='/imgs/Traveller.webp'
 					alt='Traveler with luggage'
 					width={1200}
 					height={1200}

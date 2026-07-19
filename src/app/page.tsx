@@ -21,7 +21,7 @@ const SubscribeSection = dynamic(
 )
 const Footer = dynamic(() => import('@/components/footer/Footer'))
 
-export default function Home() {
+export default function Page() {
 	return (
 		<div className='flex flex-col min-h-screen overflow-x-hidden'>
 			<div className='relative z-20'>

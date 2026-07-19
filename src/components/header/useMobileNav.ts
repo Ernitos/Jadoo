@@ -1,51 +1,40 @@
-// useMobileNav.ts
 'use client'
 
 import { useEffect } from 'react'
 
 interface UseMobileNavProps {
-  isOpen: boolean 
-  setIsOpen: (isOpen: boolean) => void
-  onScrollTo: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void
+	isOpen: boolean
+	setIsOpen: (isOpen: boolean) => void
+	onScrollTo: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void
 }
 
-export function useMobileNav({ isOpen, setIsOpen, onScrollTo }: UseMobileNavProps) {
-  
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden'
-    
-      document.body.style.touchAction = 'none' 
-    } else {
-      document.body.style.overflow = ''
-      document.body.style.touchAction = ''
-    }
+export function useMobileNav({
+	isOpen,
+	setIsOpen,
+	onScrollTo,
+}: UseMobileNavProps) {
+	useEffect(() => {
+		if (!isOpen) return
 
-    return () => {
-      document.body.style.overflow = ''
-      document.body.style.touchAction = ''
-    }
-  }, [isOpen])
+		const prevOverflow = document.body.style.overflow
+		document.body.style.overflow = 'hidden'
 
-  const handleMobileClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ) => {
-    setIsOpen(false)
-    onScrollTo(e, href)
-  }
+		return () => {
+			document.body.style.overflow = prevOverflow
+		}
+	}, [isOpen])
 
-  const handleClose = () => {
-    setIsOpen(false)
-  }
+	const handleMobileClick = (
+		e: React.MouseEvent<HTMLAnchorElement>,
+		href: string,
+	) => {
+		setIsOpen(false)
+		onScrollTo(e, href)
+	}
 
-  const handleToggle = (currentOpenState: boolean) => {
-    setIsOpen(!currentOpenState)
-  }
+	const handleClose = () => setIsOpen(false)
+	const handleToggle = (currentOpenState: boolean) =>
+		setIsOpen(!currentOpenState)
 
-  return {
-    handleMobileClick,
-    handleClose,
-    handleToggle,
-  }
+	return { handleMobileClick, handleClose, handleToggle }
 }

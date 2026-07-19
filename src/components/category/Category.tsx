@@ -32,7 +32,7 @@ export function Category() {
 			className='relative mx-auto flex w-5/6 flex-col items-center text-center gap-3 py-16 overflow-visible'
 		>
 			<Image
-				src='/imgs/plus.png'
+				src='/imgs/plus.webp'
 				alt=''
 				width={150}
 				height={150}

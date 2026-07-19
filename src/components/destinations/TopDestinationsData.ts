@@ -10,7 +10,7 @@ export type DestinationType = {
 export const DESTINATIONS_DATA: DestinationType[] = [
 	{
 		id: 1,
-		image: '/imgs/rome.jpg',
+		image: '/imgs/rome.webp',
 		city: 'Rome',
 		country: 'Italy',
 		price: '$5,42k',
@@ -18,7 +18,7 @@ export const DESTINATIONS_DATA: DestinationType[] = [
 	},
 	{
 		id: 2,
-		image: '/imgs/london.jpg',
+		image: '/imgs/london.webp',
 		city: 'London',
 		country: 'UK',
 		price: '$4.2k',
@@ -26,7 +26,7 @@ export const DESTINATIONS_DATA: DestinationType[] = [
 	},
 	{
 		id: 3,
-		image: '/imgs/Europe.png',
+		image: '/imgs/Europe.webp',
 		city: 'Full Europe',
 		country: '',
 		price: '$15k',

@@ -18,12 +18,13 @@ export function Hero() {
 				className='absolute -top-45 -right-10 md:-top-45 md:-right-20 pointer-events-none z-0 w-[65%] md:w-[53%] max-w-250 h-auto'
 			>
 				<Image
-					src='/imgs/Decore.png'
-					alt=''
+					src='/imgs/Decore.webp'
+					alt='Decore'
 					width={1000}
 					height={1000}
 					className='w-full h-auto object-top-right'
 					priority
+					fetchPriority='high'
 					quality={90}
 					style={{ width: '100%', height: 'auto' }}
 				/>

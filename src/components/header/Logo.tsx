@@ -6,7 +6,7 @@ export function Logo() {
 		<div className='shrink-0'>
 			<Link href='/'>
 				<Image
-					src='/imgs/Logo.png'
+					src='/imgs/Logo.webp'
 					alt='Jadoo'
 					width={115}
 					height={34}

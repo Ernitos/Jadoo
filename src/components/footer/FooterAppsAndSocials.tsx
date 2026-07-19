@@ -54,7 +54,7 @@ export function FooterAppsAndSocials() {
 						className='hover:scale-105 active:scale-95 transition-transform duration-200'
 					>
 						<Image
-							src='/imgs/google-play.png'
+							src='/imgs/google-play.webp'
 							alt='Get it on Google Play'
 							width={108}
 							height={35}
@@ -67,7 +67,7 @@ export function FooterAppsAndSocials() {
 						className='hover:scale-105 active:scale-95 transition-transform duration-200'
 					>
 						<Image
-							src='/imgs/app-store.png'
+							src='/imgs/app-store.webp'
 							alt='Download on the App Store'
 							width={108}
 							height={35}

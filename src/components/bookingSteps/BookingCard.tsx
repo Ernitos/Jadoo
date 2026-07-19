@@ -15,20 +15,19 @@ export function BookingCard({ variants }: BookingCardProps) {
 			whileInView='visible'
 			viewport={{ once: true, margin: '-50px' }}
 			style={{ translateZ: 0 }}
-			className='relative flex items-center justify-center min-h-[350px] sm:min-h-[450px] md:min-h-[480px] w-full z-10'
+			className='relative flex items-center justify-center min-h-87.5 sm:min-h-112.5 md:min-h-120 w-full z-10'
 		>
 			<div className='absolute w-72 h-72 rounded-full bg-blue-400/10 -z-10 pointer-events-none' />
 
-			<div className='relative rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.06)] overflow-hidden max-w-[288px] sm:max-w-[400px] md:max-w-[460px] w-full aspect-square'>
+			<div className='relative rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.06)] overflow-hidden max-w-100 sm:max-w-125 md:max-w-150 w-full aspect-square'>
 				<Image
-					src='/imgs/photo.svg'
+					src='/imgs/trip.webp'
 					alt='Trip to Rome progress'
-					fill 
-			
+					fill
 					sizes='(max-w: 640px) 288px, (max-w: 768px) 400px, 460px'
 					className='object-contain'
-					priority 
-					quality={75} 
+					priority
+					quality={75}
 				/>
 			</div>
 		</motion.div>
