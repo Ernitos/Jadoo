@@ -4,7 +4,7 @@ import { TestimonialItem } from './types'
 export const TESTIMONIALS: TestimonialItem[] = [
 	{
 		id: 1,
-		avatar: '/imgs/person.png',
+		avatar: '/imgs/person.webp',
 		text: 'On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.',
 		name: 'Mike taylor',
 		location: 'Lahore, Pakistan',
